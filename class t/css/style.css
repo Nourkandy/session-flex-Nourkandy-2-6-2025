@@ -1,0 +1,85 @@
+body{ display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100 vh;}
+
+.image-card{ width: 400px;
+border: 1 px solid;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center;
+padding: 15 px;
+background-color: aqua;
+border-radius: 8 px;
+transform: 0.3s ease-in-out;
+overflow: hidden;}
+
+.image-card img{ max-width: 100%;
+height: auto;
+display: block;
+margin: 10px auto;
+border-radius: 4px;
+transition: transform 0.3s ease-in-out;}
+
+
+.image-card h2{ color: aquamarine;
+margin-bottom: 10px;}
+
+.image-card:hover{ transform: scale(1.05) rotate(5deg);}
+
+
+.image-wrapper img{ max-width: 100%;
+height: auto;
+display: block;
+margin: 0 auto;
+border-radius: 4px;}
+.image-card:hover .image-wrapper{ transform: scale(1.1) rotate(5deg);}
+
+
+.flip-card{width: 30%;
+perspective: 1000px; }
+
+.img{ width: 100%;}
+
+.flip-card-inner{ position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 1s;
+transform-style: preserve-3d;
+border-radius: 10px;}
+
+.card-back{ position: absolute;
+background-color: aqua;
+transform: rotateY(180deg);
+height: 100%;
+width: 100%;
+backface-visibility: hidden;
+top:0
+}
+.flip-card-inner:hover.card-front{ transform: rotateY(180deg);}
+
+.card-front{ transition: 1s;
+backface-visibility: hidden;}
+
+
+.card-front.card-back{ position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;}
+.flip-card-inner{ transform-style: preserve-3d;}
+
+.flip-card:hover .flip-card-inner{ transform: rotateY(180deg);}
+
+
+
+.spinner-container i{ font-size: 5rem;
+color: red;
+
+animation-duration: 6s;
+animation-name: spin;
+animation-direction: normal;
+animation-iteration-count: infinite;}
+
+@keyframes spin{
+100%{ transform: rotate(360deg);}}
+
