@@ -7,25 +7,14 @@
   <link rel="stylesheet" href="JS/script.js">
 </head>
 <body>
-    <h2>User Entry</h2>
-  <form id="userForm">
-    <input type="text" id="name" placeholder="Enter Name" required>
-    <input type="text" id="id" placeholder="Enter ID" required>
-    <input type="number" id="balance" placeholder="Enter Balance" required>
-    <button type="submit">Submit</button>
-  </form>
+  <h2>Add users</h2>
+    <input type="text" id="name" placeholder="name" >
+    <input type="text" id="id" placeholder="id">
+    <input type="number" id="balance" placeholder="balance">
+    <button onclick="addUser()">Add</button>
 
-  <table id="userTable">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>ID</th>
-        <th>Balance</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
+    <h3>New users</h3>
+    <ul id="userList"></ul>
 
 </body>
 </html>
